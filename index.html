@@ -31,21 +31,19 @@
           <input type="text" name="shoutout" class="form-control" ng-model="sigmanaut.newPerson.shoutout" placeholder="Shoutout"/>
         </div>
           <!-- Add submit button, on click pass function from DOM -->
-          <button type="submit" ng-click="sigmanaut.createPerson()">Submit a Sigmanaut!!</button>
-          <form>
-            <h3>Search For a Sigmanaut!</h3>
-            <input type="text" name="search" class="form-control" ng-model="sigmanaut.firstName">
-          </form>
+          <button type="submit" class="btn btn-primary" ng-click="sigmanaut.createPerson()">Submit a Sigmanaut!!</button>
+
         </div>
       </form>
     </section>
     <section class="container">
       <h3>Class List</h3>
+      <input type="text" name="search" class="form-control" ng-model="sigmanaut.searchText" placeholder="Search a 'Naut">
       <ul class="list-group">
         <!-- Add loop from main array to stick Sigmanauts on the DOM -->
-        <li class="list-group-item" ng-repeat="people in sigmanaut.people | filter:firstName">
+        <li class="list-group-item" ng-repeat="people in sigmanaut.people | filter: sigmanaut.searchText">
           <!-- link in github username to name fields -->
-          <a ng-href="https://github.com/{{people.git_username}}">{{people.firstName}} {{people.lastName}}</a> <br> <p> {{people.shoutout}} </p>
+            <a ng-href="https://github.com/{{people.git_username}}">{{people.firstName}} {{people.lastName}}</a> <br> <p><i> {{people.shoutout}} </i></p>
         </li>
       </ul>
     </section>
