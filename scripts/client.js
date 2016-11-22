@@ -13,6 +13,12 @@ sigmanautApp.controller('SigmanautController', function(){ //name Ctrl, give it 
       "shoutout": "Keep it real, Wu-Tang."
     },
     {
+      "firstName": "Huck",
+      "lastName": "Brock",
+      "git_username": "huckbee",
+      "shoutout": "Chipolte and Friendship for Eeeeeveryoooone!!!"
+    },
+    {
       "firstName": "Luke",
       "lastName": "Schlangen",
       "git_username": "LukeSchlangen",
