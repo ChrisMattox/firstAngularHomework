@@ -16,12 +16,14 @@
         <div class="form-group col-md-6">
           <label for="firstName">First Name</label>
           <input type="text" name="firstName" class="form-control" ng-model="sigmanaut.newPerson.firstName" placeholder="First Name"/>
+          <!-- Add new label inputs to DOM -->
           <label for="lastName">Last Name</label>
           <input type="text" name="lastName" class="form-control" ng-model="sigmanaut.newPerson.lastName" placeholder="Last Name"/>
           <label for="git_username">Github User Name</label>
           <input type="text" name="git_username" class="form-control" ng-model="sigmanaut.newPerson.git_username" placeholder="Github Username"/>
           <label for="shoutout">Shoutout!</label>
           <input type="text" name="shoutout" class="form-control" ng-model="sigmanaut.newPerson.shoutout" placeholder="Shoutout"/>
+          <!-- Add submit button, on click pass function from DOM -->
           <button type="submit" ng-click="sigmanaut.createPerson()">Submit a Sigmanaut!!</button>
         </div>
       </form>
@@ -29,7 +31,9 @@
     <section class="container">
       <h3>Class List</h3>
       <ul class="list-group">
+        <!-- Add loop from main array to stick Sigmanauts on the DOM -->
         <li class="list-group-item" ng-repeat="people in sigmanaut.people">
+          <!-- link in github username to name fields -->
           <a ng-href="https://github.com/{{people.git_username}}">{{people.firstName}} {{people.lastName}}</a> <br> <p> {{people.shoutout}} </p>
         </li>
       </ul>
