@@ -11,6 +11,12 @@ sigmanautApp.controller('SigmanautController', function(){ //name Ctrl, give it 
       "lastName": "Mattox",
       "git_username": "ChrisMattox",
       "shoutout": "Keep it real, Wu-Tang."
+    },
+    {
+      "firstName": "Luke",
+      "lastName": "Schlangen",
+      "git_username": "LukeSchlangen",
+      "shoutout": "Thanks for being awesome during the angular lecture today."
     }
   ];
 
@@ -20,5 +26,4 @@ sigmanautApp.controller('SigmanautController', function(){ //name Ctrl, give it 
     console.log(self.newPerson);
     self.people.push(angular.copy(self.newPerson)); //pushes object copy from newPerson into people array
   };
-
 });
